@@ -10,47 +10,44 @@ using std::cout;
 using std::cin;
 
 //simple fonction check_if_two_words are equivalents
-int checkAnagram(string w1, string w2){
+bool checkAnagram(string w1, string w2){
   int i=0,j=0,k,compt=0;
   int test=0;
   if (w1.size()==w2.size()){
-    //cout << compt ;
-    //std::cout << "here" << '\n';
     k=w1.size();
     while (j<k){
       test =0;
       while(i<k){
         if (w1[j]==w2[i])
-          {test=1;
-          std::cout << i << '\n';}
+          test=1;
         i++;
       }
       if (test==1){
         compt++; //incremented when at least aletter from w1 is found in w2
-        std::cout << compt << '\n';
         j++;
       }
       if (test==0)
         break;
      i=0;
     }
-  std::cout << "out of big loop" << '\n';
   if (compt==k) {
-    std::cout << "equivalent" << '\n';
+    return true;
   }
   else
-  std::cout << "notequivalent" << '\n';
+  return false;
   }
   else
-  std::cout << "notequivalent" << '\n';
+  return false;
 }
 
 int main() {
   string word1,word2;
   cin >> word1;
   cin >> word2;
-  //cout << word1 << "\n";
-  //cout << word2 << "\n";
   checkAnagram(word1,word2);
+  if(checkAnagram)
+  std::cout << "YES" << '\n';
+  else
+  std::cout << "NO" << '\n';
   return 0;
 }
