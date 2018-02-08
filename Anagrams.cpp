@@ -29,20 +29,18 @@ bool checkAnagram(string w1, string w2){
         j++;
       }
       if ((compt-1)==k)
-      std::cout << "gody" << '\n';
         return true;
       if ((compt-1)!=k)
-      std::cout << "gody" << '\n';
-      cout << "nono" << '\n';
+
     }
   }
   else
-   cout << "tp" << '\n';
+
 }
 
 int main() {
   string word1,word2;
-  //getline(cin, word1);
+
   cin >> word1;
   cin >> word2;
   cout << word1 << "\n";
