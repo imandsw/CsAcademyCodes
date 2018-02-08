@@ -13,16 +13,13 @@ using std::boolalpha;
 
 //simple fonction check_if_two_words are equivalents
 bool checkAnagram(string w1, string w2){
-  cout << "coucou" << '\n';
   int i=0,j=0,k,compt=0;
   bool b;
-  std::cout << w1.size() << '\n';
   if (w1.size()==w2.size()){
     k=w1.size();
     while (j<k){
       b = false;
       while(i<k){
-        std::cout << w1.size() << '\n';
         if (w1[j]==w2[i])
           b = true;
         i++;
@@ -37,22 +34,20 @@ bool checkAnagram(string w1, string w2){
         return true;
       if ((compt-1)!=k)
       std::cout << "gody" << '\n';
-        return false;
+      cout << "nono" << '\n';
     }
   }
   else
-    std::cout << "nono" << '\n';
+   cout << "tp" << '\n';
 }
 
 int main() {
   string word1,word2;
   //getline(cin, word1);
   cin >> word1;
-
   cin >> word2;
-
-  cout << word1;
-  cout << word2;
+  cout << word1 << "\n";
+  cout << word2 << "\n";
   checkAnagram(word1,word2);
   return 0;
 }
