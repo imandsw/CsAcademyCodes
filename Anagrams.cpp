@@ -10,41 +10,44 @@ using std::cout;
 using std::endl;
 using std::cin;
 using std::boolalpha;
-
 //simple fonction check_if_two_words are equivalents
 int checkAnagram(string w1, string w2){
   int i=0,j=0,k,compt=0;
-  bool b;
+  int test=0;
   if (w1.size()==w2.size()){
+    //cout << compt ;
+    //std::cout << "here" << '\n';
     k=w1.size();
     while (j<k){
-      b = false;
+      test =0;
       while(i<k){
         if (w1[j]==w2[i])
-          {b = true;}
+          {test=1;
+          std::cout << i << '\n';}
         i++;
       }
-      if (b=true){
+      if (test==1){
         compt++; //incremented when at least aletter from w1 is found in w2
+        std::cout << compt << '\n';
         j++;
       }
-      if ((compt-1)==k)
-        return true;
-      if ((compt-1)!=k)
-
+      if (test==0)
+        break;
     }
+  if (compt==k) {
+    std::cout << "equivalent" << '\n';
+  }
   }
   else
-
+  std::cout << "notequivalent" << '\n';
 }
 
 int main() {
   string word1,word2;
-
   cin >> word1;
   cin >> word2;
-  cout << word1 << "\n";
-  cout << word2 << "\n";
+  //cout << word1 << "\n";
+  //cout << word2 << "\n";
   checkAnagram(word1,word2);
   return 0;
 }
