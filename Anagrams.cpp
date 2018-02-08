@@ -26,7 +26,6 @@ bool checkAnagram(string w1, string w2){
       }
       if (b=true){
         compt++;
-        std::cout << w1.size() << '\n';
         j++;
       }
       if ((compt-1)==k)
