@@ -33,10 +33,14 @@ int checkAnagram(string w1, string w2){
       }
       if (test==0)
         break;
+     i=0;
     }
+  std::cout << "out of big loop" << '\n';
   if (compt==k) {
     std::cout << "equivalent" << '\n';
   }
+  else
+  std::cout << "notequivalent" << '\n';
   }
   else
   std::cout << "notequivalent" << '\n';
