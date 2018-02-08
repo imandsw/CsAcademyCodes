@@ -7,9 +7,8 @@
 using namespace std;
 using std::string;
 using std::cout;
-using std::endl;
 using std::cin;
-using std::boolalpha;
+
 //simple fonction check_if_two_words are equivalents
 int checkAnagram(string w1, string w2){
   int i=0,j=0,k,compt=0;
