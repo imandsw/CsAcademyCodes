@@ -12,7 +12,7 @@ using std::cin;
 using std::boolalpha;
 
 //simple fonction check_if_two_words are equivalents
-bool checkAnagram(string w1, string w2){
+int checkAnagram(string w1, string w2){
   int i=0,j=0,k,compt=0;
   bool b;
   if (w1.size()==w2.size()){
@@ -21,11 +21,11 @@ bool checkAnagram(string w1, string w2){
       b = false;
       while(i<k){
         if (w1[j]==w2[i])
-          b = true;
+          {b = true;}
         i++;
       }
       if (b=true){
-        compt++;
+        compt++; //incremented when at least aletter from w1 is found in w2
         j++;
       }
       if ((compt-1)==k)
