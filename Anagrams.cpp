@@ -27,17 +27,17 @@ bool checkAnagram(string w1, string w2){
         j++;
       }
       if (test==0)
-        break;
+        break; // a letter not common means thy r not anagrams
      i=0;
     }
   if (compt==k) {
-    return true;
+    return true; // compt is exactly same as size means every letter is shown at least once in other string
   }
   else
   return false;
   }
   else
-  return false;
+  return false; // if the two strings are not same size no need to checkAnagram
 }
 
 int main() {
