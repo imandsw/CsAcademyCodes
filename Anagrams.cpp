@@ -15,7 +15,7 @@ bool checkAnagram(vector<string> v, int VectorSize){
   if (v[0].size()==v[1].size()){
     k=v[0].size();
     while (j<k){
-      test =0;
+      test = 0;
       while(i<k){
         if (v[0][j]==v[1][i])
           test=1;
