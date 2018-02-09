@@ -1,6 +1,6 @@
 
-#include<bits/stdc++.h>
-#include<vector>
+#include <bits/stdc++.h>
+#include <vector>
 #include <iostream>
 #include <array>
 #include <string>
@@ -9,16 +9,17 @@ using std::string;
 using std::cout;
 using std::cin;
 
-//simple fonction check_if_two_words are equivalents
-bool checkAnagram(string w1, string w2){
+//simple fonction check_if_two number of words are anagrams
+
+bool checkAnagram(std::vector<string> v){
   int i=0,j=0,k,compt=0;
   int test=0;
-  if (w1.size()==w2.size()){
-    k=w1.size();
+  if (v[0].size()==v[1].size()){
+    k=v[0].size();
     while (j<k){
       test =0;
       while(i<k){
-        if (w1[j]==w2[i])
+        if (v[0][j]==v[1][i])
           test=1;
         i++;
       }
@@ -41,10 +42,17 @@ bool checkAnagram(string w1, string w2){
 }
 
 int main() {
-  string word1,word2;
-  cin >> word1;
-  cin >> word2;
-  checkAnagram(word1,word2);
+  int N;
+  vector <string> words;
+  string s;
+  cin >> N;
+  for (size_t i = 0; i < N; i++){
+    cin >> s;
+    words.push_back(s);
+  }
+  std::cout << words[0] << '\n';
+  std::cout << words[1] << '\n';
+  checkAnagram(words);
   if(checkAnagram)
   std::cout << "YES" << '\n';
   else

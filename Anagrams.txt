@@ -29,10 +29,7 @@ cellar
 parrots
 recall
 
-
-
 3
-
 
 
 caller, cellar and recall are (the only) equivalent words.
