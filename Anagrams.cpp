@@ -4,40 +4,43 @@
 #include <iostream>
 #include <array>
 #include <string>
+#include <cmath>
 using namespace std;
 using std::string;
 using std::cout;
 using std::cin;
 
+double sweight(string w) {
+  /* So the idea is affecting a weight to a word which depends only of
+  * the letters it contains. So that checkAnagram would just have to
+  *compare the weight of the paramaters
+  *But the real benefit is making the calculation only once for each word and
+  *store the answers instead of the words, in order to find faster the largest 
+  *subset of anagrams
+  */
+  
+  //here we are assuming a word won't contain more than 9 occurences
+  //of the same letter
+  // if not enough, we'll just increase the base
+  int base=10;
+  
+  double weight=0;
+  int l=w.size();
+  for (int i=0; i<l; i++)
+  {   
+    weight+=pow(base, w[i]-'a');
+  }
+  
+  return weight;
+
+}
+
 //simple fonction check_if_two_words are equivalents
 bool checkAnagram(string w1, string w2){
-  int i=0,j=0,k,compt=0;
-  int test=0;
-  if (w1.size()==w2.size()){
-    k=w1.size();
-    while (j<k){
-      test =0;
-      while(i<k){
-        if (w1[j]==w2[i])
-          test=1;
-        i++;
-      }
-      if (test==1){
-        compt++; //incremented when at least aletter from w1 is found in w2
-        j++;
-      }
-      if (test==0)
-        break; // a letter not common means thy r not anagrams
-     i=0;
-    }
-  if (compt==k) {
-    return true; // compt is exactly same as size means every letter is shown at least once in other string
-  }
-  else
-  return false;
-  }
-  else
-  return false; // if the two strings are not same size no need to checkAnagram
+ 
+    // the complexity is a bit higher than the first approach but we won't
+    // really need this function anymore
+    return (sweight(w1)==sweight(w2);
 }
 
 int main() {
