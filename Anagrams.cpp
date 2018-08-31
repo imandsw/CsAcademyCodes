@@ -40,7 +40,7 @@ bool checkAnagram(string w1, string w2){
  
     // the complexity is a bit higher than the first approach but we won't
     // really need this function anymore
-    return (sweight(w1)==sweight(w2);
+    return (sweight(w1)==sweight(w2));
 }
 
 int main() {
